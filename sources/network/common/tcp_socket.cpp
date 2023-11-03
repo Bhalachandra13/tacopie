@@ -27,12 +27,7 @@
 #ifdef _WIN32
 #ifdef __GNUC__
 #   include <Ws2tcpip.h>	   // Mingw / gcc on windows
-    /*#define _WIN32_WINNT 0x0501*/
-    #ifndef _WIN32_WINNT
-        #define _WIN32_WINNT 0x0600
-    #elif _WIN32_WINNT < 0x0600
-        #undef _WIN32_WINNT
-        #define _WIN32_WINNT 0x0600
+    #define _WIN32_WINNT 0x0600
     #endif
    #include <winsock2.h>
    #   include <Ws2tcpip.h>
